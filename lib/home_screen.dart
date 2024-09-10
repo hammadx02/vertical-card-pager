@@ -14,42 +14,42 @@ class _HomeScreenState extends State<HomeScreen> {
     ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: Image.network(
-        "https://images.unsplash.com/photo-1592731056753-5cbc8085e1cf?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1609899464726-209befaac5bc?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8V29ya291dCUyMEdlYXJ8ZW58MHx8MHx8fDA%3D",
         fit: BoxFit.cover,
       ),
     ),
     ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: Image.network(
-        "https://plus.unsplash.com/premium_photo-1697729758639-d692c36557b2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1661604445845-4c75a36cb93b?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8WW9nYSUyMFBvc2VzfGVufDB8fDB8fHww",
         fit: BoxFit.cover,
       ),
     ),
     ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: Image.network(
-        "https://images.unsplash.com/photo-1592731057019-57ed336948ed?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://media.istockphoto.com/id/1441759606/photo/happy-sportswoman-with-earbuds-running-in-the-park.webp?a=1&b=1&s=612x612&w=0&k=20&c=P2-f_YCriQOG6v700vp7xBRJwePEsFC7e2Arek1QDII=",
         fit: BoxFit.cover,
       ),
     ),
     ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: Image.network(
-        "https://images.unsplash.com/photo-1592731056711-b3101e30584b?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1674605378401-dbf2af9e9c5c?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SGVhbHRoeXxlbnwwfHwwfHx8MA%3D%3D",
         fit: BoxFit.cover,
       ),
     ),
     ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: Image.network(
-        "https://images.unsplash.com/photo-1600786428316-0d6cc71d5181?q=80&w=2530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1678964117504-dc77a8b9985a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8T3V0ZG9vciUyMEFjdGl2aXRpZXN8ZW58MHx8MHx8fDA%3D",
         fit: BoxFit.cover,
       ),
     ),
     ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: Image.network(
-        "https://images.unsplash.com/photo-1619463206719-f87a692cdd7a?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1682093043490-6ddcb8b5f3a3?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8U3RyZW5ndGglMjBUcmFpbmluZ3xlbnwwfHwwfHx8MA%3D%3D",
         fit: BoxFit.cover,
       ),
     ),
@@ -74,7 +74,6 @@ class _HomeScreenState extends State<HomeScreen> {
             children: <Widget>[
               Expanded(
                   child: VerticalCardPager(
-                physics: BouncingScrollPhysics(),
                 images: images,
                 titles: titles,
                 textStyle: GoogleFonts.bebasNeue(
