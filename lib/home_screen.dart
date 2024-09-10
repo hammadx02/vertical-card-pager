@@ -48,6 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: <Widget>[
               Expanded(
                 child: VerticalCardPager(
+                  physics: BouncingScrollPhysics(),
                   images: images,
                   titles: titles,
                   onPageChanged: (page) {},
