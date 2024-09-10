@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:vertical_card_pager/vertical_card_pager.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({ Key? key }) : super(key: key);
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -12,32 +13,57 @@ class _HomeScreenState extends State<HomeScreen> {
   final List<Widget> images = [
     ClipRRect(
       borderRadius: BorderRadius.circular(10),
-      child: Image.network("https://images.unsplash.com/photo-1541778480-fc1752bbc2a9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njl8fHdhdGNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60", fit: BoxFit.cover,), 
+      child: Image.network(
+        "https://images.unsplash.com/photo-1592731056753-5cbc8085e1cf?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        fit: BoxFit.cover,
+      ),
     ),
     ClipRRect(
       borderRadius: BorderRadius.circular(10),
-      child: Image.network("https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHdhdGNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60", fit: BoxFit.cover,), 
+      child: Image.network(
+        "https://plus.unsplash.com/premium_photo-1697729758639-d692c36557b2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        fit: BoxFit.cover,
+      ),
     ),
     ClipRRect(
       borderRadius: BorderRadius.circular(10),
-      child: Image.network("https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8d2F0Y2h8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60", fit: BoxFit.cover,), 
+      child: Image.network(
+        "https://images.unsplash.com/photo-1592731057019-57ed336948ed?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        fit: BoxFit.cover,
+      ),
     ),
     ClipRRect(
       borderRadius: BorderRadius.circular(10),
-      child: Image.network("https://images.unsplash.com/photo-1547996160-81dfa63595aa?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHdhdGNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60", fit: BoxFit.cover,), 
+      child: Image.network(
+        "https://images.unsplash.com/photo-1592731056711-b3101e30584b?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        fit: BoxFit.cover,
+      ),
     ),
     ClipRRect(
       borderRadius: BorderRadius.circular(10),
-      child: Image.network("https://images.unsplash.com/photo-1617714651073-17a0fcd14f9e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDd8fHdhdGNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60", fit: BoxFit.cover,), 
+      child: Image.network(
+        "https://images.unsplash.com/photo-1600786428316-0d6cc71d5181?q=80&w=2530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        fit: BoxFit.cover,
+      ),
     ),
     ClipRRect(
       borderRadius: BorderRadius.circular(10),
-      child: Image.network("https://images.unsplash.com/photo-1618828272323-9f46e858e55e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTB8fHdhdGNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60", fit: BoxFit.cover,), 
+      child: Image.network(
+        "https://images.unsplash.com/photo-1619463206719-f87a692cdd7a?q=80&w=3174&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        fit: BoxFit.cover,
+      ),
     ),
   ];
 
-  final List<String> titles = ['', '', '', '', '', ''];
-  
+  final List<String> titles = [
+    'Workout Gear',
+    'Yoga Poses',
+    'Running Shoes',
+    'Healthy Food',
+    'Outdoor Activities',
+    'Strength Training'
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,16 +73,17 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             children: <Widget>[
               Expanded(
-                child: VerticalCardPager(
-                  physics: BouncingScrollPhysics(),
-                  images: images,
-                  titles: titles,
-                  onPageChanged: (page) {},
-                  onSelectedItem: (index) {
-                    print(index);
-                  },
-                )
-              ),
+                  child: VerticalCardPager(
+                physics: BouncingScrollPhysics(),
+                images: images,
+                titles: titles,
+                textStyle: GoogleFonts.bebasNeue(
+                    fontWeight: FontWeight.bold, color: Colors.white),
+                onPageChanged: (page) {},
+                onSelectedItem: (index) {
+                  print(index);
+                },
+              )),
             ],
           ),
         ),
